@@ -1,3 +1,149 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body
+{
+	background-color:#000;
+}
+
+#wrapper
+{
+	
+}
+
+
+#headerBack {
+        width:100%;
+        height:auto;
+        display:block;
+		background-image:url(../images/headerBg.png);
+		background-repeat:repeat;
+        margin:auto;
+        position:relative;
+		z-index:4;
+        }
+
+
+
+#xmenLogo {
+        width:17%;
+        height:auto;
+        position:absolute;
+        top:0%;
+        left:42%;
+        }       
+
+
+#leftDragon {
+        width:4%;
+        height:auto;
+        position:absolute;
+        top:4%;
+        left:2%;
+		opacity:0.5;
+        }       
+
+#rightDragon {
+        width:4%;
+        height:auto;
+        position:absolute;
+        top:4%;
+        right:2%;
+		opacity:0.5;
+        } 
+
+
+
+
+
+
+
+#headerBg
+{
+	background-image:url(../images/headerBg.png);
+	display:block;
+	height:116px;
+	background-repeat:repeat-x;
+	margin:-8px;
+	position:relative;
+}
+
+
+#headerDragon
+{
+	background-image: url(../images/headDragon.png);
+	background-repeat: no-repeat;
+	position: relative;
+	height: 56px;
+	float: left;
+	width: 53px;
+	margin-top: 26px;
+	margin-left: 25px;
+	opacity: 0.6;
+}
+
+#headerDrag2
+{
+	background-image: url(../images/headDragon%202.png);
+	background-repeat: no-repeat;
+	position: relative;
+	height: 56px;
+	float: right;
+	width: 53px;
+	margin-top: 26px;
+	margin-right: 25px;
+	opacity: 0.6;
+
+}
+
+#headerLogo
+{
+	background-image:url(../images/headerLogo.png);
+	width:199px;
+	height:194px;
+	background-repeat:no-repeat;
+	position:absolute;
+	margin-top: -108px;
+	left: 50%;
+	margin-left: -99.5px;
+	overflow:hidden;
+	text-indent:100%;
+	white-space:nowrap;
+	display:block;
+	z-index:1;
+}
+
+#logo
+{
+	width:100%;
+	height:auto;
+	margin:auto;
+	position: relative;
+	left: 50%;
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
+	z-index: 1;
+	font-size:0;
+}
+
+#logo img
+{
+	width:199px;
+	height:auto;
+	position:relative;
+	margin:auto;
+}
+
+#navBarBg
+{
+	background-image:url(../images/sliderFooter.png);
+	background-repeat:repeat-x;
+	height:50px;
+	position:relative;
+	opacity:0.7;
+	margin-left:-8px;
+	margin-right:-8px;
+}
+
+

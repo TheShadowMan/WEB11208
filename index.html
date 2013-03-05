@@ -1,39 +1,101 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="css/layout.css" rel="stylesheet" type="text/css" />
-<title>The AQW X-Men</title>
-</head>
-
-<body>
-<div id="wrapper">
-  <div id="navBar">
-    <ul>
-      <li> <a href="index.html"> Home </a> </li>
-      <li> <a href="pages/about.html"> About </a> </li>
-      <li> <a href="pages/profiles.html"> Profiles </a> </li>
-      <li> <a href="pages/gallery.html"> Gallery </a> </li>
-      <li> <a href="pages/join.html"> Join </a> </li>
-    </ul>
-  </div>
-  <!--End of navbar!-->
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="css/layout.css" rel="stylesheet" type="text/css" />
+  <link href="css/flexslider.css" rel="stylesheet" type="text/css" />
   
-  <div id="mainContent">
+  <title>The AQW X-Men</title>
+
+  <!-- Syntax Highlighter 
+
+  <script type="text/javascript" src="js/shCore.js"></script>
+  <script type="text/javascript" src="js/shBrushXml.js"></script>
+  <script type="text/javascript" src="js/shBrushJScript.js"></script>
+
+  <!-- Optional FlexSlider Additions 
+
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/demo.js"></script> -->
+  </head>
+
+  <body>
+<div id="wrapper">  
+    <div id="headerBack"> <!--The whole header !-->
+    
+        <div class="flexslider"> <!--The slider !-->
+    		<ul class="slides">
+        		<li> <img src="images/Join.png" /> </li>
+				<li> <img src="images/PVP menu.png" /> </li>
+     		 </ul>
+ 		</div>
+        
+        <a href="index.html"> <img src="images/headerLogo.png" id="xmenLogo"/> AQW X-Men </a> 		 
+        <!--The logo !-->
+        
+        <img src="images/headDragon.png" id="leftDragon"/>
+        <img src="images/headDragon 2.png" id="rightDragon" />
+            
+      <!-- <div id="headerDragon"> </div>
+      <div id="headerDrag2"> </div> !-->
+      
+     </div> <!--End of headerBack!--> 
+    
+    <!--<a href="index.html" id="headerLogo"> AQW X-Men </a> <!--End of headerLogo!-->
+    
+
+ 
+ 	<div id="navBarBg"> </div>
+    <div id="navBar">
+    <ul>
+        <li> <a href="index.html"> Home </a> </li>
+        <li> <a href="pages/pvp.html"> PVP </a> </li>
+        <li> <a href="pages/profiles.html"> Profiles </a> </li>
+        <li> <a href="pages/gallery.html"> Gallery </a> </li>
+        <li> <a href="pages/join.html"> Join </a> </li>
+      </ul>
+  </div>
+    <!--End of navbar!-->
+    
+    <div id="mainContent">
     <h1>AQW X-Men Guild</h1>
   </div>
-  <!--End of mainContent!-->
-  
-  <div id="footer"> </div>
-  <!--End of footer!--> 
-  
+    <!--End of mainContent!-->
+    
+    <div id="footer"> </div>
+    <!--End of footer!--> 
+    
+
+
+<p> We are the AQW X-Men. We are a group of exceptional people; mutants, with exceptional talents. We use our talents to 
+    fight for the freedom and protection of the innocent, mutant and human alike. For those who wish to end that freedom,
+    we send this message to you; we may not know who you are, we may not know what you want, but we will find you, and we 
+    will end you - we are here to stay and we are always watching! </p>
+
+  <!-- jQuery -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+
+  <script defer src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      <!--SyntaxHighlighter.all(); <!-->
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
 </div>
 <!--End of wrapper!--> 
-
-<img src="images/aqwxmen.jpg" width="500px" height="300px" alt="The X-Men"/>
-<p> We are the AQW X-Men. We are a group of exceptional people; mutants, with exceptional talents. We use our talents to 
-  fight for the freedom and protection of the innocent, mutant and human alike. For those who wish to end that freedom,
-  we send this message to you; we may not know who you are, we may not know what you want, but we will find you, and we 
-  will end you - we are here to stay and we are always watching! </p>
 </body>
 </html>

@@ -2,25 +2,111 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>About AQW X-Men</title>
-<h1>About the AQW X-Men Guild</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link href="../css/layout.css" rel="stylesheet" type="text/css" />
+<link href="../css/flexslider.css" rel="stylesheet" type="text/css" />
+<title>The AQW X-Men</title>
+
+<!-- Syntax Highlighter 
+
+  <script type="text/javascript" src="js/shCore.js"></script>
+  <script type="text/javascript" src="js/shBrushXml.js"></script>
+  <script type="text/javascript" src="js/shBrushJScript.js"></script>
+
+  <!-- Optional FlexSlider Additions 
+
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script defer src="js/demo.js"></script> -->
 </head>
 
 <body>
+<div id="wrapper">
+  <div id="headerBack"> <!--The whole header !--> 
 
-  <ul>
-	<li> <a href="../index.html"> Home </a> </li>
-    <li> <a href="about.html"> About </a> </li>
-    <li> <a href="profiles.html"> Profiles </a> </li>
-    <li> <a href="gallery.html"> Gallery </a> </li>
-    <li> <a href="join.html"> Join </a> </li>
-  </ul>
+    <img src="../images/headerBgtx.png" id="headerBgtx" />
+
+    <div class="flexslider"> <!--The slider !-->
+      <ul class="slides">
+        <li> <a href="join.html"><img src="../images/Join.png"/></a> </li>
+        <li> <a href="pvp.html"><img src="../images/PVP menu.png"/></a></li>
+      </ul>
+    </div>
+    <a href="../index.html"> <img src="../images/headerLogo.png" id="xmenLogo"/> </a> 
+    <!--The logo !--> 
+    
+    <img src="../images/headDragon.png" id="leftDragon"/> <img src="../images/headDragon 2.png" id="rightDragon" /> 
+        
+    <nav class="clearfix">
+      <ul class="clearfix">
+        <li> <a href="profiles.html"><img src="../images/profiles.png"></a> </li>
+        <li> <a href="gallery.html"><img src="../images/gallery.png"></a> </li>
+        <li> <a href="pvp.html"><img src="../images/pvp.png"></a> </li>
+        <li> <a href="join.html"><img src="../images/Joinbutton.png"></a> </li>
+      </ul>
+      <a href="#" id="pull"><img src="../images/menu.png"></a> </nav>
+      
+    <div id="mainContent">
+     <p> 
+     	This is a PVP (player vs player) page where we'll showcase some of our most exciting
+        PVP action encounters both Guild vs Guild and 1v1. Expect both external and in house fighting!
+     </p>
+     <img src="../images/headDragon.png" id="contentDragon" />  
+     </div>
+      
+      
+   </div> <!--End of headerBack!-->   
+    
+  </div>
+  <!--End of mainContent!-->
   
- <p>
-    The AQW X-Men was founded in 2012 some month can't remember what date, but anyway this is long
-    I haven't got time to be typing a whole about us section so just carry on scrolling the rest
-    of pages for now.
- </p>
+  <div id="footer"> </div>
+  <!--End of footer!-->
   
+    
+  
+  <!-- jQuery --> 
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script> 
+  
+  <!-- FlexSlider !--> 
+  
+  <script defer src="../js/jquery.flexslider.js"></script> 
+  <script type="text/javascript">
+    $(function(){
+      <!--SyntaxHighlighter.all(); <!-->
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script> 
+  <script type="text/javascript">
+  $(function() {
+	var pull 		= $('#pull');
+		menu 		= $('nav ul');
+		menuHeight	= menu.height();
+
+	$(pull).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+});
+
+$(window).resize(function(){
+	var w = $(window).width();
+	if(w > 320 && menu.is(':hidden')) {
+		menu.removeAttr('style');
+	}
+});	
+
+  </script> 
+  
+</div> <!--End of wrapper!-->
 </body>
 </html>

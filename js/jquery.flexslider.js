@@ -8,7 +8,8 @@
  *
  * Contributing author: Tyler Smith (@mbmufffin)
  */
-
+$(document).ready(function() {
+	$('.flexslider').fadeIn ('slow');
 ;(function ($) {
 
   //FlexSlider: Object Instance
@@ -902,3 +903,4 @@
   }
 
 })(jQuery);
+});

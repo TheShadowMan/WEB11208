@@ -33,6 +33,7 @@ body
         position:absolute;
         top:0%;
         left:42%;
+		z-index:6;
         }       
 
 

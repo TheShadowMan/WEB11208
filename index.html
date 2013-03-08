@@ -1,6 +1,51 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+<!-- jQuery -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+<!-- FlexSlider !-->
+
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">  $(document).ready(function() {
+    $(function(){
+      <!--SyntaxHighlighter.all(); <!-->
+    });	
+	
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+	 
+ }); </script>
+ 
+<script type="text/javascript">
+  $(function() {
+	var pull 		= $('#pull');
+		menu 		= $('nav ul');
+		menuHeight	= menu.height();
+
+	$(pull).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+});
+
+$(window).resize(function(){
+	var w = $(window).width();
+	if(w > 320 && menu.is(':hidden')) {
+		menu.removeAttr('style');
+	}
+});
+	
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
@@ -23,20 +68,19 @@
 <body>
 <div id="wrapper">
   <div id="headerBack"> <!--The whole header !--> 
-
+    
     <img src="images/headerBgtx.png" id="headerBgtx" />
-
+    
     <div class="flexslider"> <!--The slider !-->
       <ul class="slides">
-        <li> <a href="pages/join.html"><img src="images/Join.png"/></a> </li>
+        <li> <a href="pages/join.html"><img src="images/Join.png"/> </a> </li>
         <li> <a href="pages/pvp.html"><img src="images/PVP menu.png"/></a></li>
       </ul>
     </div>
     <a href="index.html"> <img src="images/headerLogo.png" id="xmenLogo"/> </a> 
     <!--The logo !--> 
     
-    <img src="images/headDragon.png" id="leftDragon"/> <img src="images/headDragon 2.png" id="rightDragon" /> 
-        
+    <img src="images/headDragon.png" id="leftDragon"/> <img src="images/headDragon 2.png" id="rightDragon" />
     <nav class="clearfix">
       <ul class="clearfix">
         <li> <a href="pages/profiles.html"><img src="images/profiles.png"></a> </li>
@@ -45,69 +89,21 @@
         <li> <a href="pages/join.html"><img src="images/Joinbutton.png"></a> </li>
       </ul>
       <a href="#" id="pull"><img src="images/menu.png"></a> </nav>
-      
     <div id="mainContent">
-     <p> Hello viewers, this is the homepage of the AQW X-MEN website. We are the AQW X-Men. We are a 			         group of exceptional people; mutants, with exceptional talents. We use our talents to 
-         fight for the freedom and protection of the innocent, mutant and human alike. For those who         wish to end that freedom, we send this message to you; we may not know who you are, we may not         know what you want, but we will find you, and we 
-         will end you - we are here to stay and we are always watching! 
-     </p>
-     <img src="images/headDragon.png" id="contentDragon" />  
-     </div>
-      
-      
-   </div> <!--End of headerBack!--> 
-   
-    
+      <p> Hello viewers, this is the homepage of the AQW X-MEN website. We are the AQW X-Men. We are a 			         group of exceptional people; mutants, with exceptional talents. We use our talents to 
+        fight for the freedom and protection of the innocent, mutant and human alike. For those who         wish to end that freedom, we send this message to you; we may not know who you are, we may not         know what you want, but we will find you, and we 
+        will end you - we are here to stay and we are always watching! </p>
+      <img src="images/headDragon.png" id="contentDragon" /> </div>
   </div>
-  <!--End of mainContent!-->
+  <!--End of headerBack!--> 
   
-  <div id="footer"> </div>
-  <!--End of footer!-->
-  
-    
-  
-  <!-- jQuery --> 
-  
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script> 
-  
-  <!-- FlexSlider !--> 
-  
-  <script defer src="js/jquery.flexslider.js"></script> 
-  <script type="text/javascript">
-    $(function(){
-      <!--SyntaxHighlighter.all(); <!-->
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script> 
-  <script type="text/javascript">
-  $(function() {
-	var pull 		= $('#pull');
-		menu 		= $('nav ul');
-		menuHeight	= menu.height();
+</div>
+<!--End of mainContent!-->
 
-	$(pull).on('click', function(e) {
-		e.preventDefault();
-		menu.slideToggle();
-	});
-});
+<div id="footer"> </div>
+<!--End of footer!-->
 
-$(window).resize(function(){
-	var w = $(window).width();
-	if(w > 320 && menu.is(':hidden')) {
-		menu.removeAttr('style');
-	}
-});	
-
-  </script> 
-  
-</div> <!--End of wrapper!-->
+</div>
+<!--End of wrapper!-->
 </body>
 </html>
